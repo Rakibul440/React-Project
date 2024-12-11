@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+
+    <script>
+        function addLanguage(language){
+            //creating 'li' element 
+            const li = document.createElement('li')
+            li.innerHTML = language
+
+            //placed the element  into 'ul'
+            const ul = document.querySelector(".language")
+            ul.appendChild(li)
+
+            // console.log(ul);
+            
+        };
+        addLanguage("Python")
+        addLanguage("Java")
+
+        function addOptiLang(language){
+            const li = document.createElement('li')
+            //its better to create a textNode than 'innerHTML'
+            li.appendChild(document.createTextNode(language))
+
+            document.querySelector(".language").appendChild(li)
+
+        };
+        addOptiLang("C++")
+        addOptiLang("golang")
+
+        //edit
+        const secondLang = document.querySelector('li:nth-child(2)')
+        console.log(secondLang)
+        
+        const newLang = document.createElement('li')
+        newLang.appendChild(document.createTextNode("TypeScript"))
+        // newLang.textContent = "TypeScript"
+        console.log(newLang);
+        
+        secondLang.replaceWith(newLang)
+
+        //remove (delete golang)
+        const lastLang = document.querySelector('li:last-child')
+        console.log(lastLang)
+        lastLang.remove()
+        
+        
+    </script>
+</body>
+</html>

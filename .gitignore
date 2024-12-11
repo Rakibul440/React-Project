@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# Build output
+/build
+/dist
+
+# React Native
+# (If you’re working with React Native, uncomment these lines)
+# .expo/
+# .expo-shared/
+
+# Dependency directories
+/.pnp
+/.pnp.js
+
+# Testing
+/coverage
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and editor specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Yarn lock file (if you are using npm instead)
+yarn.lock
+
+# npm package-lock file (if you use Yarn, you may want to exclude this)
+package-lock.json
+
+# Optional npm cache directory
+.npm/
